@@ -1,0 +1,23 @@
+version: "3.8"
+name: movieapp
+
+services:
+  neo4j-db:
+    image: neo4j:5.1.0-community
+    container_name: neo4j
+    volumes:
+      - app-neo4j-db:/data
+    ports:
+      - 7687:7687 # Bolt
+      - 7474:7474 # HTTP
+    environment:
+      NEO4J_AUTH: "neo4j/secret"
+      dbms_connector_bolt_listen__address: neo4j-db:7687
+      dbms_connector_bolt_advertised__address: neo4j-db:7687
+    healthcheck:
+      test: cypher-shell --username neo4j --password secret 'MATCH (n) RETURN COUNT(n);'
+      interval: 10s
+      timeout: 10s
+      retries: 5
+volumes:
+  app-neo4j-db:
