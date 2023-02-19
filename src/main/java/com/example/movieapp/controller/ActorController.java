@@ -20,32 +20,42 @@ public class ActorController {
     private final ActorService actorService;
 
     @GetMapping
-    public ResponseEntity<List<ActorDTO>> getAllActors() {
-        List<ActorDTO> actorDTOS = actorService.findAll();
-        return new ResponseEntity<>(actorDTOS, HttpStatus.OK);
+    public ResponseEntity<List<ActorDTO>> getAll() {
+
+        List<ActorDTO> actors = actorService.findAll();
+
+        return new ResponseEntity<>(actors, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ActorDTO> getActorById(@PathVariable Long id) {
+    public ResponseEntity<ActorDTO> getById(@PathVariable Long id) {
+
         ActorDTO actorDTO = actorService.findById(id);
+
         return new ResponseEntity<>(actorDTO, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<ActorDTO> createActor(@RequestBody @Valid ActorDTO actorDTO) {
-        actorService.create(actorDTO);
+    public ResponseEntity<ActorDTO> save(@RequestBody @Valid ActorDTO actorDTO) {
+
+        ActorDTO actor = actorService.create(actorDTO);
+
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ActorDTO> updateActor(@PathVariable Long id, @RequestBody @Valid ActorDTO actorDTO) {
+    public ResponseEntity<ActorDTO> update(@PathVariable Long id, @RequestBody @Valid ActorDTO actorDTO) {
+
         ActorDTO actor = actorService.update(id, actorDTO);
+
         return new ResponseEntity<>(actor, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> deleteActor(@PathVariable Long id) {
+    public ResponseEntity<HttpStatus> delete(@PathVariable Long id) {
+
         actorService.delete(id);
+
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -15,4 +15,10 @@ public interface ActorService {
     ActorDTO update(Long id, ActorDTO actorDTO);
 
     void delete(Long id);
+
+    List<ActorDTO> findActorsByMovieId(Long movieId);
+
+    void addActorToMovie(Long movieId, ActorDTO actorDTO);
+
+    void deleteActorFromMovie(Long id, Long actorId);
 }
