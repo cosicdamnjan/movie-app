@@ -1,7 +1,21 @@
 version: "3.8"
-name: movieapp
+name: movie-app
 
 services:
+  app:
+    image: cosicdamnjan/movie-app:latest
+    container_name: app
+    environment:
+      SPRING_NEO4J_URI: bolt://neo4j-db:7687
+      SPRING_NEO4J_AUTHENTICATION_USERNAME: neo4j
+      SPRING_NEO4J_AUTHENTICATION_PASSWORD: secret
+    ports:
+      - 8080:8080
+    depends_on:
+      neo4j-db:
+        condition: service_healthy
+    links:
+      - neo4j-db
   neo4j-db:
     image: neo4j:5.1.0-community
     container_name: neo4j

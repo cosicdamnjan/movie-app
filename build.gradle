@@ -1,18 +1,13 @@
 plugins {
+	id 'org.springframework.boot' version '2.7.4'
+	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
-	id 'org.springframework.boot' version '2.7.8'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'com.palantir.docker' version '0.22.1'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+group = 'com.prodyna'
+version = '0.1.0'
 sourceCompatibility = '11'
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
-}
 
 repositories {
 	mavenCentral()
@@ -42,8 +37,28 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mockito:mockito-inline:4.8.0'
 	testImplementation 'org.mockito:mockito-junit-jupiter:4.8.0'
+
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+task copyJarToDockerDir(type: Copy) {
+	from "$buildDir/libs"
+	include "movie-app-0.1.0.jar"
+	into "$buildDir/docker"
+}
+
+task buildDockerImage(type:Exec) {
+	workingDir "$projectDir"
+	commandLine "docker", "build", "-t", "cosicdamnjan/${project.name}:${project.version}", "-t", "cosicdamnjan/${project.name}:latest", "."
+}
+
+task pushDockerImage(type: Exec) {
+	commandLine "docker", "push", "cosicdamnjan/${project.name}:${project.version}"
+}
+
+copyJarToDockerDir.dependsOn build
+buildDockerImage.dependsOn copyJarToDockerDir
+pushDockerImage.dependsOn buildDockerImage

@@ -1,0 +1,11 @@
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: secret
+      uri: neo4j://localhost:7687
+  jpa:
+    show-sql: true
+server:
+  error:
+    include-message: always

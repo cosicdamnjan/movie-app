@@ -1,0 +1,252 @@
+{
+   "movies":
+   [
+      {
+         "name":"Top Gun: Maverick",
+         "actors":[
+            {"firstName": "Tom", "lastName": "Cruise", "biography":  "Thomas Cruise Mapother IV, known professionally as Tom Cruise, is an American actor and producer."},
+            {"firstName": "Jennifer", "lastName": "Connelly", "biography": "Jennifer Lynn Connelly is an American actress. She began her career as a child model before making her acting debut in the 1984 crime film Once Upon a Time in America."},
+            {"firstName": "Miles", "lastName": "Teller", "biography": "Miles Alexander Teller is an American actor known for his roles as jazz drummer Andrew Neiman in Whiplash and pilot Lt. Bradley \"Rooster\" Bradshaw in Top Gun: Maverick."}
+         ],
+         "genre":["ACTION"],
+         "releaseDate": 2022,
+         "durationInMin": 130,
+         "description":"After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+         "reviews": [
+            {"title": "OK movie", "rating": 4, "description": "It is ok"},
+            {"title": "It is amazing", "rating": 4, "description": "I am thrilled with the movie"},
+            {"title": "Not bad", "rating": 5, "description":  "Not so bad movie"},
+            {"title": "Great", "rating": 4, "description": "You should watch it"},
+            {"title": "Bad movie", "rating": 5, "description": "Not so good as they say"},
+            {"title": "Nothing special", "rating": 5, "description": "It is not that special movie"},
+            {"title": "Best", "rating": 3, "description": "It is the best movie"},
+            {"title": "Best movie of all times", "rating": 4, "description": "My favorite movie"},
+            {"title": "Thrilled", "rating": 5, "description": "Very good movie"},
+            {"title": "Watch it", "rating": 5, "description": "You should definitely watch it"},
+            {"title": "Great movie", "rating": 4, "description": "Really great movie"},
+            {"title": "I love it", "rating": 3, "description": "These kind of action movies is my best"}
+         ]
+      },
+      {
+         "name":"The Talented Mr. Ripley",
+         "actors":[
+            {"firstName": "Matt", "lastName": "Damon", "biography": "Matthew Paige Damon is an American actor, film producer, and screenwriter."},
+            {"firstName": "Gwyneth", "lastName": "Paltrow", "biography": "Gwyneth Kate Paltrow is an American actress. She is the recipient of various accolades, including an Academy Award, a Golden Globe Award, and a Primetime Emmy Award."},
+            {"firstName": "Jude", "lastName": "Law", "biography": "David Jude Heyworth Law is an English actor. He received a British Academy Film Award, as well as nominations for two Academy Awards, two Tony Awards, and four Golden Globe Awards."}
+         ],
+         "genre": ["DRAMA"],
+         "releaseDate": 1999,
+         "durationInMin": 139,
+         "description":"In late 1950s New York, Tom Ripley, a young underachiever, is sent to Italy to retrieve Dickie Greenleaf, a rich and spoiled millionaire playboy. But when the errand fails, Ripley takes extreme measures.",
+         "reviews":[
+            {"title": "It is pretty okay", "rating": 4, "description": "Really good movie"},
+            {"title": "Great movie", "rating": 4, "description": "Great movie, watch it"},
+            {"title": "Awesome movie", "rating": 5, "description": "Personally the best of all times"},
+            {"title": "Nice movie", "rating": 4, "description": "Really nice movie"},
+            {"title": "Pretty good", "rating": 4, "description": "Pretty good movie, watch it"},
+            {"title": "It is ok", "rating": 3, "description": "It is ok, not so bad"},
+            {"title": "Watch it", "rating": 4, "description": "Great drama movie"},
+            {"title": "Nice", "rating": 4, "description": "Really nice"},
+            {"title": "Thrilled with it", "rating": 5, "description": "Fantastic"},
+            {"title": "It is great", "rating": 4, "description": "My recommendations"},
+            {"title": "Wow it is great", "rating": 4, "description": "It is under must"},
+            {"title": "Ok movie", "rating": 3, "description": "Not so bad"}
+         ]
+      },
+      {
+         "name":"The Lord of the Rings",
+         "actors":[
+            {"firstName": "Elijah", "lastName": "Wood", "biography": "Elijah Jordan Wood is an American actor and producer."},
+            {"firstName": "Ian", "lastName": "McKellen", "biography": "Sir Ian Murray McKellen CH CBE is an English actor. His career spans seven decades, having performed in genres ranging from Shakespearean and modern theatre to popular fantasy and science fiction."},
+            {"firstName": "Orlando", "lastName": "Bloom", "biography": "Orlando Jonathan Blanchard Copeland Bloom is an English actor."}
+         ],
+         "genre":["ADVENTURE"],
+         "releaseDate": 2001,
+         "durationInMin": 178,
+         "description":"A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+         "reviews":[
+            {"title": "Ok not to bad", "rating": 4, "description": "Ok movie"},
+            {"title": "Great", "rating": 4, "description": "Great movie"},
+            {"title": "Fine", "rating": 4, "description": "Fine movie"},
+            {"title": "Amazing", "rating": 5, "description": "Amazing movie"},
+            {"title": "Good", "rating": 4, "description": "Good movie"},
+            {"title": "Really bad", "rating": 2, "description": "Really bad movie"},
+            {"title": "Fine movie", "rating": 3, "description": "Fine movie, watch it"},
+            {"title": "Do not watch it", "rating": 2, "description": "Do not watch this movie, it is not good"},
+            {"title": "Not bad", "rating": 3, "description": "Not so bad as they say"},
+            {"title": "Good movie", "rating": 4, "description": "Good movie, it' ok"}
+         ]
+      },
+      {
+         "name":"The Bourne Identity",
+         "actors":[
+            {"firstName": "Matt", "lastName": "Damon", "biography": "Matthew Paige Damon is an American actor, film producer, and screenwriter."},
+            {"firstName": "Franka", "lastName": "Potente", "biography": "Franka Potente is a German actress."},
+            {"firstName": "Chris", "lastName": "Cooper", "biography": "Christopher Walton Cooper is an American actor."}
+         ],
+         "genre":["ACTION"],
+         "releaseDate": 2002,
+         "durationInMin": 119,
+         "description":"A man is picked up by a fishing boat, bullet-riddled and suffering from amnesia, before racing to elude assassins and attempting to regain his memory.",
+         "reviews":[
+            {"title": "Really good", "rating": 4, "description": "Really good movie"},
+            {"title": "Fine", "rating": 3, "description": "Fine movie"},
+            {"title": "Ok it is good", "rating": 3, "description": "Ok movie"},
+            {"title": "Not bad", "rating": 3, "description": "Not bad movie"},
+            {"title": "Amazing", "rating": 4, "description": "Amazing movie"},
+            {"title": "Not like it", "rating": 2, "description": "Not like it, i have seen better"},
+            {"title": "Nothing special", "rating": 3, "description": "Nothing special, but it is ok for watching"},
+            {"title": "Great", "rating": 4, "description": "Great movie"},
+            {"title": "Not bad movie", "rating": 3, "description": "Not bad movie, watch it"},
+            {"title": "WOW great", "rating": 5, "description": "Amazed"},
+            {"title": "Enjoyable", "rating": 4, "description": "Enjoyable movie"},
+            {"title": "Entertaining", "rating": 4, "description": "Entertaining movie"},
+            {"title": "Not so good, not so bad", "rating": 3, "description": "Fine if you are bored to watch it"}
+         ]
+      },
+      {
+         "name":"The Batman",
+         "actors":[
+            {"firstName": "Robert", "lastName": "Pattinson", "biography": "Robert Douglas Thomas Pattinson is an English actor."},
+            {"firstName": "Zoë", "lastName": "Kravitz", "biography": "Zoë Isabella Kravitz is an American actress, singer, and model."},
+            {"firstName": "Jeffrey", "lastName": "Wright", "biography": "Jeffrey Wright is an American actor."}
+         ],
+         "genre":["ACTION"],
+         "releaseDate": 2022,
+         "durationInMin": 176,
+         "description":"When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+         "reviews":[
+            {"title": "Great", "rating": 4, "description": "Great movie"},
+            {"title": "Amazing", "rating": 5, "description": "Amazing movie"},
+            {"title": "Enjoyable", "rating": 5, "description": "Enjoyable movie"},
+            {"title": "Pleasurable", "rating": 4, "description": "Pleasurable movie"},
+            {"title": "Good", "rating": 4, "description": "Good movie"},
+            {"title": "Really good", "rating": 5, "description": "Really good movie"},
+            {"title": "Great movie", "rating": 4, "description": "Great movie"},
+            {"title": "Really nice", "rating": 4, "description": "Really nice movie"},
+            {"title": "My favourite", "rating": 5, "description": "My favourite movie"},
+            {"title": "Good movie", "rating": 4, "description": "Really good movie"},
+            {"title": "Fine movie", "rating": 4, "description": "Watch it"},
+            {"title": "Ok not too bad", "rating": 3, "description": "Ok movie"}
+         ]
+      },
+      {
+         "name":"Star Wars",
+         "actors":[
+            {"firstName": "Mark", "lastName": "Hamill", "biography": "Mark Richard Hamill is an American actor, voice actor and writer."},
+            {"firstName": "Carrie", "lastName": "Fisher", "biography": "Carrie Frances Fisher was an American actress and writer."},
+            {"firstName": "Harrison", "lastName": "Ford", "biography": "Harrison Ford is an American actor."}
+         ],
+         "genre":["ADVENTURE"],
+         "releaseDate": 1977,
+         "durationInMin": 121,
+         "description":"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+         "reviews":[
+            {"title": "Amazing", "rating": 5, "description": "Amazing movie"},
+            {"title": "Wow amazing", "rating": 4, "description": "Amazing movie, watch it!!"},
+            {"title": "Great", "rating": 5, "description": "Great movie"},
+            {"title": "Ok it can be better", "rating": 3, "description": "Ok movie"},
+            {"title": "Pretty nice", "rating": 4, "description": "Pretty nice movie"},
+            {"title": "Good", "rating": 3, "description": "Good movie"},
+            {"title": "Entertaining", "rating": 4, "description": "Entertaining movie"},
+            {"title": "Fantastic", "rating": 5, "description": "Fantastic movie"}
+         ]
+      },
+      {
+         "name":"Jumanji",
+         "actors":[
+            {"firstName": "Robin", "lastName": "Williams", "biography": "Robin McLaurin Williams was an American actor and comedian."},
+            {"firstName": "Bonnie", "lastName": "Hunt", "biography": "Bonnie Lynn Hunt is an American actress, comedian, director, producer, writer and television host."},
+            {"firstName": "Kirsten", "lastName": "Dunst", "biography": "Kirsten Caroline Dunst is an American actress."}
+         ],
+         "genre":["ADVENTURE"],
+         "releaseDate": 1995,
+         "durationInMin": 104,
+         "description":"When two kids find and play a magical board game, they release a man trapped in it for decades - and a host of dangers that can only be stopped by finishing the game.",
+         "reviews":[
+            {"title": "Great", "rating": 5},
+            {"title": "Good", "rating": 3},
+            {"title": "Not bad", "rating": 4},
+            {"title": "Ok nothing special", "rating": 3},
+            {"title": "Fine", "rating": 4},
+            {"title": "Really bad", "rating": 2},
+            {"title": "Do not watch it", "rating": 3},
+            {"title": "Watch it", "rating": 4},
+            {"title": "Really good", "rating": 3}
+         ]
+      },
+      {
+         "name":"Inception",
+         "actors":[
+            {"firstName": "Leonardo", "lastName": "DiCaprio", "biography": "Leonardo Wilhelm DiCaprio is an American actor and film producer."},
+            {"firstName": "Joseph", "lastName": "Gordon-Levitt", "biography": "Joseph Leonard Gordon-Levitt is an American actor and filmmaker."},
+            {"firstName": "Tom", "lastName": "Hardy", "biography": "Edward Thomas Hardy CBE is an English actor."}
+         ],
+         "genre":["ACTION"],
+         "releaseDate": 2010,
+         "durationInMin": 148,
+         "description":"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+         "reviews":[
+            {"title": "Fine", "rating": 4},
+            {"title": "Great", "rating": 4},
+            {"title": "Amazing", "rating": 5},
+            {"title": "Enjoyable", "rating": 5},
+            {"title": "Fun, watch it", "rating": 5},
+            {"title": "Action at its finest", "rating": 5},
+            {"title": "Not thrilled about it", "rating": 3},
+            {"title": "WOW mind blowing", "rating": 4},
+            {"title": "My best", "rating": 5},
+            {"title": "Favourite", "rating": 5},
+            {"title": "Lovely", "rating": 4},
+            {"title": "Really cool", "rating": 5}
+         ]
+      },
+      {
+         "name":"Good Will Hunting",
+         "actors":[
+            {"firstName": "Robin", "lastName": "Williams", "biography": "Robin McLaurin Williams was an American actor and comedian."},
+            {"firstName": "Matt", "lastName": "Damon", "biography": "Matthew Paige Damon is an American actor, film producer, and screenwriter."},
+            {"firstName": "Ben", "lastName": "Affleck", "biography": "Benjamin Géza Affleck is an American actor and filmmaker."}
+         ],
+         "genre":["DRAMA"],
+         "releaseDate": 1997,
+         "durationInMin": 126,
+         "description":"Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.",
+         "reviews":[
+            {"title": "Good", "rating": 3},
+            {"title": "Bad nothing special", "rating": 2},
+            {"title": "Fine", "rating": 4},
+            {"title": "Great", "rating": 4},
+            {"title": "Amazing", "rating": 4},
+            {"title": "Not bad", "rating": 3},
+            {"title": "Watch it", "rating": 3},
+            {"title": "WOW amazing", "rating": 4},
+            {"title": "Favourite movie", "rating": 5}
+         ]
+      },
+      {
+         "name":"Edward Scissorhands",
+         "actors":[
+            {"firstName": "Johnny", "lastName": "Depp", "biography": "John Christopher Depp II is an American actor and musician."},
+            {"firstName": "Winona", "lastName": "Ryder", "biography": "Winona Laura Horowitz, professionally known as Winona Ryder, is an American actress."},
+            {"firstName": "Dianne", "lastName": "Wiest", "biography": "Dianne Evelyn Wiest is an American actress."}
+         ],
+         "genre":["DRAMA"],
+         "releaseDate": 1990,
+         "durationInMin": 105,
+         "description":"An artificial man, who was incompletely constructed and has scissors for hands, leads a solitary life. Then one day, a suburban lady meets him and introduces him to her world.",
+         "reviews":[
+            {"title": "Good", "rating": 3},
+            {"title": "Not bad", "rating": 3},
+            {"title": "Watch it", "rating": 4},
+            {"title": "Dislike", "rating": 2},
+            {"title": "WOW amazing", "rating": 4},
+            {"title": "Ok not bad", "rating": 3},
+            {"title": "The worst", "rating": 2},
+            {"title": "Amazed", "rating": 5},
+            {"title": "Enjoyable", "rating": 4},
+            {"title": "Good movie", "rating": 3}
+         ]
+      }
+   ]
+}
