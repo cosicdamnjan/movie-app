@@ -159,6 +159,4 @@ WA - Java + Spring boot + Neo4j
 
 ## Authors
 
-### GitHub [damnjancosic](https://github.com/damnjancosic)
-
-### This project at GitHub [damnjancosic/movie-app](https://github.com/PRODYNA/dc-movie-app)
+### GitHub [cosicdamnjan](https://github.com/cosicdamnjan)
