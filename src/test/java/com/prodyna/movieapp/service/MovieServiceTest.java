@@ -7,6 +7,7 @@ import com.prodyna.movieapp.error.exceptions.MovieAlreadyExistsException;
 import com.prodyna.movieapp.error.exceptions.MovieNotFoundException;
 import com.prodyna.movieapp.mapper.MovieMapper;
 import com.prodyna.movieapp.repository.MovieRepository;
+import com.prodyna.movieapp.service.impl.ActorServiceImpl;
 import com.prodyna.movieapp.service.impl.MovieServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,6 +29,8 @@ class MovieServiceTest {
 
     @Mock
     private MovieRepository movieRepository;
+    @Mock
+    private ActorServiceImpl actorService;
     @Mock
     private MovieMapper movieMapper;
     @InjectMocks
@@ -110,18 +113,31 @@ class MovieServiceTest {
 
     @Test
     void should_createMovie() {
+//        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
+//        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
+//                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
+//        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
+//        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
+//
+//        Assertions.assertDoesNotThrow(() -> movieService.create(createdMovieDTO));
+//
+//        MovieDTO savedMovie = movieService.create(createdMovieDTO);
+//
+//        Assertions.assertNotNull(savedMovie);
 
-        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
-        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
-                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
-        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
-        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
+        when(movieRepository)
 
-        Assertions.assertDoesNotThrow(() -> movieService.create(createdMovieDTO));
-
-        MovieDTO savedMovie = movieService.create(createdMovieDTO);
-
-        Assertions.assertNotNull(savedMovie);
+//        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
+//        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
+//                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
+//        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
+//        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
+//
+//        Assertions.assertDoesNotThrow(() -> movieService.create(createdMovieDTO));
+//
+//        MovieDTO savedMovie = movieService.create(createdMovieDTO);
+//
+//        Assertions.assertNotNull(savedMovie);
     }
 
     @Test
@@ -146,7 +162,7 @@ class MovieServiceTest {
         when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
 
 
-        MovieDTO savedMovie = movieService.create(createdMovieDTO);
+        MovieDTO savedMovie = movieService.update(createdMovie);
 
         Assertions.assertNotNull(savedMovie);
     }
