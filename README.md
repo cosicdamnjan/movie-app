@@ -1,13 +1,7 @@
 
-WA - Java + Spring boot + Neo4j
+Java + Spring boot + Neo4j
 =======
 
-##  Used By
-
-* **PRODYNA Innovative IT Consultancy**
-##  Documentation Link
-
-* https://secure.prodyna.de/confluence/pages/viewpage.action?pageId=313694345
 ## Technology Stack
 ##### This project was built using IntelliJ IDEA and uses the following technologies:
 * Java 11 (OpenJDK 11.0.13)
@@ -159,6 +153,4 @@ WA - Java + Spring boot + Neo4j
 
 ## Authors
 
-### GitHub [damnjancosic](https://github.com/damnjancosic)
-
-### This project at GitHub [damnjancosic/movie-app](https://github.com/PRODYNA/dc-movie-app)
+### GitHub [cosicdamnjan](https://github.com/cosicdamnjan)
