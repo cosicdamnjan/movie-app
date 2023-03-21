@@ -58,7 +58,6 @@ public class MovieServiceImpl implements MovieService {
             throw new MovieAlreadyExistsException(ALREADY_EXISTS);
         }
 
-        movieDTO.setId(null);
         Movie movie = mapper.mapToMovie(movieDTO);
         checkIfActorExists(movie);
         movieRepository.save(movie);
@@ -67,8 +66,16 @@ public class MovieServiceImpl implements MovieService {
     }
 
     private void checkIfActorExists(Movie movie) {
+        if (movie == null || movie.getActors() == null) {
+            return;
+        }
+
         Set<Actor> actors = new HashSet<>(movie.getActors());
         actors.forEach(actor -> {
+            if (actor == null) {
+                return;
+            }
+
             Optional<Actor> existingActor = actorRepository.findByFirstNameAndLastName(actor.getFirstName(), actor.getLastName());
             if (existingActor.isPresent()) {
                 movie.getActors().remove(actor);

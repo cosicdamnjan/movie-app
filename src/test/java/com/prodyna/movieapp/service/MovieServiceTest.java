@@ -13,11 +13,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -43,102 +45,41 @@ class MovieServiceTest {
     private Movie testingDateUpdate;
 
     private Movie buildMovie(Long id, String name, List<Genre> genre, Date releaseDate, Double durationInMin, String description) {
-        return Movie.builder()
-                .id(id)
-                .name(name)
-                .genre(genre)
-                .releaseDate(releaseDate)
-                .durationInMin(durationInMin)
-                .description(description)
-                .build();
+        return Movie.builder().id(id).name(name).genre(genre).releaseDate(releaseDate).durationInMin(durationInMin).description(description).build();
     }
 
     private MovieDTO buildMovieDTO(String name, List<Genre> genre, Date releaseDate, Double durationInMin, String description) {
-        return MovieDTO.builder()
-                .name(name)
-                .genre(genre)
-                .releaseDate(releaseDate)
-                .durationInMin(durationInMin)
-                .description(description)
-                .build();
+        return MovieDTO.builder().name(name).genre(genre).releaseDate(releaseDate).durationInMin(durationInMin).description(description).build();
     }
 
     @BeforeEach
     private void init() {
 
-        createdMovieDTO = buildMovieDTO(
-                "The Lord of the Rings",
-                List.of(Genre.ACTION),
-                new Date(2001),
-                178.0,
-                "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
-        );
+        createdMovieDTO = buildMovieDTO("The Lord of the Rings", List.of(Genre.ACTION), new Date(2001), 178.0, "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.");
 
-        createdMovie = buildMovie(
-                1L,
-                "The Lord of the Rings",
-                List.of(Genre.ACTION),
-                new Date(2001),
-                178.0,
-                "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.");
+        createdMovie = buildMovie(1L, "The Lord of the Rings", List.of(Genre.ACTION), new Date(2001), 178.0, "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.");
 
-        mappedMovieForCreating = Movie.builder()
-                .name("The Lord of the Rings")
-                .genre(List.of(Genre.ACTION))
-                .releaseDate(new Date(2001))
-                .durationInMin(178.0)
-                .description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.")
-                .build();
+        mappedMovieForCreating = Movie.builder().name("The Lord of the Rings").genre(List.of(Genre.ACTION)).releaseDate(new Date(2001)).durationInMin(178.0).description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.").build();
 
-        testingDate = Movie.builder()
-                .name("The Lord of the Rings")
-                .genre(List.of(Genre.ACTION))
-                .releaseDate(new Date(2001))
-                .durationInMin(178.0)
-                .description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.")
-                .createdAt(LocalDateTime.of(2022, 11, 23, 8, 51, 07))
-                .modifiedAt(LocalDateTime.of(2022, 11, 23, 8, 51, 07))
-                .build();
+        testingDate = Movie.builder().name("The Lord of the Rings").genre(List.of(Genre.ACTION)).releaseDate(new Date(2001)).durationInMin(178.0).description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.").createdAt(LocalDateTime.of(2022, 11, 23, 8, 51, 07)).modifiedAt(LocalDateTime.of(2022, 11, 23, 8, 51, 07)).build();
 
-        testingDateUpdate = Movie.builder()
-                .name("The Lord of the Rings")
-                .genre(List.of(Genre.ACTION))
-                .releaseDate(new Date(2001))
-                .durationInMin(178.0)
-                .description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.")
-                .createdAt(LocalDateTime.now())
-                .modifiedAt(LocalDateTime.now())
-                .build();
+        testingDateUpdate = Movie.builder().name("The Lord of the Rings").genre(List.of(Genre.ACTION)).releaseDate(new Date(2001)).durationInMin(178.0).description("A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.").createdAt(LocalDateTime.now()).modifiedAt(LocalDateTime.now()).build();
     }
 
     @Test
     void should_createMovie() {
-//        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
-//        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
-//                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
-//        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
-//        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
-//
-//        Assertions.assertDoesNotThrow(() -> movieService.create(createdMovieDTO));
-//
-//        MovieDTO savedMovie = movieService.create(createdMovieDTO);
-//
-//        Assertions.assertNotNull(savedMovie);
+        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
+        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(), mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
+        when(movieRepository.save(mappedMovieForCreating)).thenReturn(mappedMovieForCreating);
+        when(movieMapper.mapToMovieDTO(mappedMovieForCreating)).thenReturn(createdMovieDTO);
 
-        when(movieRepository)
+        MovieDTO savedMovie = movieService.create(createdMovieDTO);
 
-//        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
-//        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
-//                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
-//        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
-//        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
-//
-//        Assertions.assertDoesNotThrow(() -> movieService.create(createdMovieDTO));
-//
-//        MovieDTO savedMovie = movieService.create(createdMovieDTO);
-//
-//        Assertions.assertNotNull(savedMovie);
+        Assertions.assertNotNull(savedMovie);
+        Assertions.assertEquals(createdMovieDTO.getName(), savedMovie.getName());
+        Assertions.assertEquals(createdMovieDTO.getReleaseDate(), savedMovie.getReleaseDate());
     }
+
 
     @Test
     void should_findById() {
@@ -154,17 +95,26 @@ class MovieServiceTest {
 
     @Test
     void should_updateMovie() {
+        Long id = 1L;
+        MovieDTO updatedMovieDTO = MovieDTO.builder()
+                .id(id)
+                .name("Updated Movie")
+                .releaseDate(new Date(2022, Calendar.APRIL, 1))
+                .durationInMin(120.0)
+                .description("An updated movie")
+                .build();
+        Movie updatedMovie = buildMovie(id, "Updated Movie", List.of(Genre.DRAMA), new Date(2022, Calendar.APRIL, 1), 120.0, "An updated movie");
 
-        when(movieMapper.mapToMovie(createdMovieDTO)).thenReturn(mappedMovieForCreating);
-        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
-                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.empty());
-        when(movieRepository.save(mappedMovieForCreating)).thenReturn(createdMovie);
-        when(movieMapper.mapToMovieDTO(createdMovie)).thenReturn(createdMovieDTO);
+        when(movieRepository.findById(id)).thenReturn(Optional.of(createdMovie));
+        when(movieRepository.findByNameAndReleaseDate(updatedMovieDTO.getName(), updatedMovieDTO.getReleaseDate())).thenReturn(Optional.empty());
+        when(movieRepository.save(ArgumentMatchers.any(Movie.class))).thenReturn(updatedMovie);
+        when(movieMapper.mapToMovieDTO(ArgumentMatchers.any(Movie.class))).thenReturn(updatedMovieDTO);
 
-
-        MovieDTO savedMovie = movieService.update(createdMovie);
+        MovieDTO savedMovie = movieService.update(id, updatedMovieDTO);
 
         Assertions.assertNotNull(savedMovie);
+        Assertions.assertEquals(updatedMovieDTO.getName(), savedMovie.getName());
+        Assertions.assertEquals(updatedMovieDTO.getReleaseDate(), savedMovie.getReleaseDate());
     }
 
     @Test
@@ -191,8 +141,7 @@ class MovieServiceTest {
     @Test
     void should_throwMovieAlreadyExists_whenUpdateMovieWhichAlreadyExists() {
 
-        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(),
-                mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.of(createdMovie));
+        when(movieRepository.findByNameAndReleaseDate(mappedMovieForCreating.getName(), mappedMovieForCreating.getReleaseDate())).thenReturn(Optional.of(createdMovie));
 
         Assertions.assertThrows(MovieAlreadyExistsException.class, () -> {
             movieService.create(createdMovieDTO);
